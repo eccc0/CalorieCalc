@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de Calorias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icone.webp" type="image/x-icon">
+</head>
+  <body>
+    <main>
+        <h1>Contador de calorias</h1>
+        <div class="container">
+            <form id="calorie-counter">
+                <label for="budget">Contador:</label>
+                <input type="number" id="budget" min="0" placeholder="consumo de calorias" required></input>
+            
+            <fieldset id="breakfast">
+                <legend>Café da manhã</legend>
+                <div class="input-container"></div>
+            </fieldset>
+            <fieldset id="lunch">
+                <legend>Almoço</legend>
+                <div class="input-container"></div>
+            </fieldset>
+            <fieldset id="dinner">
+            <legend>Jantar</legend>
+            <div class="input-container"></div>
+        </fieldset>
+        <fieldset id="snacks">
+            <legend>Lanche</legend>
+            <div class="input-container"></div>
+        </fieldset>
+        <fieldset id="exercise">
+            <legend>Exercícios</legend>
+            <div class="input-container"></div>
+        </fieldset>
+        </div>
+        <div class="controls">
+            <span>
+                <label for="entry-dropdown">Adicionar exercício ou alimentação</label>
+            <select name="options" id="entry-dropdown">
+
+                <option value="breakfast" selected>Café da manhã</option>
+                <option value="lunch">Almoço</option>
+                <option value="dinner">Jantar</option>
+                <option value="snacks">Lanche</option>
+                <option value="exercise">Exercícios</option>
+
+
+            </select>
+        <button id="add-entry">Adicionar</button>    
+        </span>
+        </div>
+        <div class="buttons-master">
+            <button type="submit">Calcular calorias restantes</button>
+            <button class="clear" id="clear" type="button">Apagar</button>
+        </div>
+        <div id="output" class="output hide"></div>
+    </form>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
